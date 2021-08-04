@@ -1,0 +1,117 @@
+// Modals
+.modal-order,
+.modal-success-submit {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.modal-order--show,
+.modal-success-submit--show {
+  display: flex;
+}
+
+.modal-order__window,
+.modal-success-submit__window {
+  width: 728px;
+  min-height: 444px;
+  box-sizing: border-box;
+
+  @media (max-width: @mobile-width) {
+    width: 320px;
+    min-height: 568px;
+  }
+}
+
+.modal-order__window {
+  display: flex;
+  justify-content: flex-end;
+  background-color: @modal-photo-bg-color;
+  background-image: url("../img/jpg/modal-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  box-shadow: 0 4px 30px rgba(@shadow, 0.4);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/modal-bg@2.jpg");
+  }
+
+  @media (max-width: @mobile-width) {
+    background: none;
+  }
+}
+
+.modal-order__inner {
+  display: flex;
+  flex-direction: column;
+  background-color: @modal-form-bg-color;
+  width: 390px;
+
+  @media (max-width: @mobile-width) {
+    .side-padding(16px; 16px);
+    width: 320px;
+    background-color: @white;
+  }
+}
+
+.modal-order__close,
+.modal-success-submit__close {
+  .size(22px; 22px);
+  margin: 20px 20px 0 auto;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/svg/close.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+
+  @media (max-width: @mobile-width) {
+    margin-right: 0;
+  }
+}
+
+.modal-order__title {
+  .font(25px; 170%; 600);
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: @modal-title-color;
+
+  @media (max-width: @mobile-width) {
+    margin-top: 59px;
+  }
+}
+
+.modal-success-submit__window {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: @modal-form-bg-color;
+  box-shadow: 0 4px 30px rgba(@shadow, 0.4);
+
+  @media (max-width: @mobile-width) {
+    .side-padding(16px; 16px);
+  }
+}
+
+.modal-success-submit__message {
+  .font(25px; 170%; 500);
+  align-self: center;
+  width: 400px;
+  margin-top: 138px;
+  text-align: center;
+  color: @modal-title-color;
+
+  @media (max-width: @mobile-width) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,41 @@
+// Mixins.
+
+// Margins & Paddings.
+
+.side-padding(@left; @right) {
+  padding-left: @left;
+  padding-right: @right;
+}
+
+.side-margin(@left; @right) {
+  margin-left: @left;
+  margin-right: @right;
+}
+
+.indent-0(@value: 0) {
+  padding: @value;
+  margin: @value;
+}
+
+// Font size & Line height.
+
+.font(@size; @line; @weight: 400) {
+  font-size: @size;
+  line-height: @line;
+  font-weight: @weight;
+}
+
+// Sizing.
+
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+// Width Fixation.
+
+.desktop-fix-width {
+  .side-margin(auto; auto);
+  max-width: 1170px;
+  box-sizing: border-box;
+}

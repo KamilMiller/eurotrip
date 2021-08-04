@@ -1,0 +1,136 @@
+// Page-Header
+
+.page-header {
+  .desktop-fix-width;
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+
+  @media (max-width: @tablet-width) {
+    min-height: 50px;
+    padding-left: 21px;
+  }
+
+  @media (max-width: @mobile-width) {
+    padding-left: 17px;
+  }
+}
+
+.page-header__logo {
+  margin-right: auto;
+
+  @media (max-width: @tablet-width) {
+    margin-top: 5px;
+  }
+
+  @media (max-width: @mobile-width) {
+    margin-top: 7px;
+  }
+}
+
+.page-header__logo-pic {
+  .size(57px; 22px);
+
+  @media (max-width: @tablet-width) {
+    .size(44px; 17px);
+  }
+}
+
+.page-header__nav-toggle {
+  display: none;
+
+  @media (max-width: @tablet-width) {
+    .size(72px; 50px);
+    position: relative;
+    order: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @pink;
+    border: none;
+
+    &::before,
+    &::after {
+      .size(22px, 1px);
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      background-color: @white;
+    }
+
+    &::before {
+      top: 18px;
+    }
+
+    &::after {
+      bottom: 17px;
+    }
+
+    &--nojs {
+      display: none;
+    }
+  }
+
+  @media (max-width: @mobile-width) {
+    width: 50px;
+  }
+}
+
+.page-header__nav-toggle span {
+  @media (max-width: @tablet-width) {
+    .size(22px; 1px);
+    background-color: @white;
+    display: block;
+  }
+}
+
+.page-header__nav-toggle--close {
+  @media (max-width: @tablet-width) {
+    z-index: 4;
+    background-color: transparent;
+    background-image: url("../img/svg/close.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.page-header__nav-toggle--close span {
+  @media (max-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__phone {
+  .font(18px; 32px);
+  display: flex;
+  min-width: 221px;
+  margin-left: 58px;
+  margin-right: 2px;
+  padding-top: 5px;
+  color: @dark-gray;
+  font-weight: 400;
+
+  &:hover {
+    color: @pink;
+  }
+
+  &:hover .page-header__phone-logo {
+    fill: @pink;
+  }
+
+  @media (max-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__phone-logo {
+  margin-top: 3px;
+  margin-right: 17px;
+}

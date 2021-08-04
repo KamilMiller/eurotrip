@@ -1,0 +1,83 @@
+// Callback
+
+.callback {
+  .desktop-fix-width;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 455px;
+  margin-bottom: 164px;
+  background-image: url("../img/jpg/callback-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: auto 100%;
+  color: @dark-gray;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/callback-bg.jpg");
+  }
+
+  @media (max-width: @tablet-width) {
+    justify-content: center;
+    margin-bottom: 80px;
+    background-size: cover;
+  }
+
+  @media (max-width: @mobile-width) {
+    min-height: 441px;
+    margin-bottom: 60px;
+    background: none;
+  }
+}
+
+.callback__inner {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 656px;
+  min-height: 315px;
+  padding: 50px;
+  border-radius: 5px;
+  background: @white;
+  box-shadow: 0 4px 30px rgba(@shadow, 0.1);
+  box-sizing: border-box;
+
+  @media (max-width: @tablet-width) {
+    min-height: 311px;
+  }
+
+  @media (max-width: @mobile-width) {
+    .side-padding(16px; 16px);
+    width: 100%;
+    min-height: 441px;
+    border-radius: unset;
+    background-color: @modal-form-bg-color;
+    box-shadow: none;
+  }
+}
+
+.callback__title {
+  .font(25px; 32px; 600);
+  margin-bottom: 11px;
+
+  @media (max-width: @mobile-width) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.callback__instruction {
+  .font(16px; 150%);
+  margin-top: 0;
+  margin-bottom: 24px;
+
+  @media (max-width: @mobile-width) {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.callback__form {
+  align-self: stretch;
+}
