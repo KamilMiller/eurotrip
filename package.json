@@ -22,7 +22,7 @@
     "gulp-webp": "^4.0.1",
     "postcss": "^8.3.6",
     "postcss-csso": "^5.0.1",
-    "stylelint": "^13.13.1",
+    "stylelint": "^14.0.0",
     "stylelint-config-htmlacademy": "^0.1.10"
   },
   "scripts": {
@@ -46,6 +46,6 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "14.17.3"
+    "node": "16.20.1"
   }
 }
